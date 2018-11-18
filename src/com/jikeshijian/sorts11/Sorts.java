@@ -103,7 +103,6 @@ public class Sorts {
     /**
      * sectionSort: each loop, selection the index of the minimum number in the remaining values
      * and exchange the value.
-     *
      * @param a: the array to be sorted.
      * @param n: the length of the array.
      */
