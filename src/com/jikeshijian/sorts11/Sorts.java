@@ -12,7 +12,8 @@ public class Sorts {
         int[] arr = {3, 1, 5, 2, 7, 9, 6, 4, 8};
         int length = arr.length;
         // bubbleSort(arr, length);
-        insertionSort(arr, length);
+        // insertionSort(arr, length);
+        selectionSort(arr, length);
         // Arrays.toString(arr): 源码中使用到了StringBuilder的拼接功能.
         System.out.println(Arrays.toString(arr));
     }
@@ -45,9 +46,9 @@ public class Sorts {
             boolean flag = false;
             for (int j = 0; j < n - i - 1; j++) {
                 if (a[j] > a[j + 1]) {
-                    int temp = a[j];
+                    int tmp = a[j];
                     a[j] = a[j + 1];
-                    a[j + 1] = temp;
+                    a[j + 1] = tmp;
                     // 有交换, 标志位为true.
                     flag = true;
                 }
@@ -96,6 +97,32 @@ public class Sorts {
              */
             a[j + 1] = value;
 
+        }
+    }
+
+    /**
+     * sectionSort: each loop, selection the index of the minimum number in the remaining values
+     * and exchange the value.
+     *
+     * @param a: the array to be sorted.
+     * @param n: the length of the array.
+     */
+    private static void selectionSort(int[] a, int n) {
+        if (n <= 1) {
+            return;
+        }
+
+        for (int i = 0; i < n; i++) {
+            int minValueIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (a[j] < a[minValueIndex]) {
+                    minValueIndex = j;
+                }
+            }
+            // find the minValue, exchange the value of minValueIndex and i.
+            int tmp = a[minValueIndex];
+            a[minValueIndex] = a[i];
+            a[i] = tmp;
         }
     }
 }
