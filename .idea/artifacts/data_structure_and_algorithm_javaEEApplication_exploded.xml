@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="data_structure_and_algorithm:javaEEApplication exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/data_structure_and_algorithm_javaEEApplication_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="data_structure_and_algorithm/javaeeApplication/javaEEApplication" />
+    </root>
+  </artifact>
+</component>
