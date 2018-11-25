@@ -1,6 +1,8 @@
 package com.jikeshijian.sorts11;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Hashtable;
 
 /**
  * 冒泡排序(bubbleSort), 插入排序(insertionSort), 选择排序(selectionSort)
@@ -13,9 +15,10 @@ public class Sorts {
         int length = arr.length;
         // bubbleSort(arr, length);
         // insertionSort(arr, length);
-        selectionSort(arr, length);
+        // selectionSort(arr, length);
         // Arrays.toString(arr): 源码中使用到了StringBuilder的拼接功能.
         System.out.println(Arrays.toString(arr));
+
     }
 
     /**
@@ -33,7 +36,8 @@ public class Sorts {
      * 2. 不要使用int value1 = a[i];和int value2 = a[j];会造成value1与value2的值交换后并不会改变数组的大小顺序.
      * 3. if (a[j] > a[j + 1]) {...}: 表示从小到大; if (a[j] < a[j + 1]) {...}: 表示从大到小;
      * 4. 通过设置退出标志位flag, 可以提高效率.
-     *
+     * 5. j < n - i - 1; 1 bubble, 1 number is sorted, i bubbles, i numbers are sorted,
+     *      so, the last i numbers are not need to be compared with.
      * @param a: the array to be sorted.
      * @param n: the length of the array.
      */
@@ -72,7 +76,7 @@ public class Sorts {
      * 1, 2, 3, 5, 4    put 2 between 1 and 3.
      * 1, 2, 3, 4, 5    put 4 between 3 and 5.
      * 1, 2, 3, 4, 5    the array is ok(the loop is over, the array is sorted ok.)
-     *
+     * int value = a[i]; a[j] > value; a[j + 1] = value; because, each move(a[j + 1] = a[j];), the a[i] is different.
      * @param a: the array to be sorted.
      * @param n: the length of the array.
      */
