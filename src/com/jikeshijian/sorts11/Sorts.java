@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 
 /**
- * 冒泡排序(bubbleSort), 插入排序(insertionSort), 选择排序(selectionSort)
+ * 冒泡排序(bubbleSort): O(n^2), 插入排序(insertionSort): O(n^2), 选择排序(selectionSort): O(n^2)
  *
  * @author Chris
  */
@@ -128,4 +128,6 @@ public class Sorts {
             a[i] = tmp;
         }
     }
+
+
 }
