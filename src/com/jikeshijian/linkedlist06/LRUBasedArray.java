@@ -113,6 +113,7 @@ public class LRUBasedArray<T> {
             0000 1000
          */
         System.out.println(1 << 3);
+
     }
 
 
