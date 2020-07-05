@@ -41,6 +41,7 @@ public class QuickSort {
         int i = p;
         int pivot = a[r];
         // put the larger number front, put the smaller number behind.
+
         for (int j = p; j < r; j++) {
             if (a[j] < pivot) {
                 int tmp = a[i];
@@ -52,6 +53,7 @@ public class QuickSort {
 
         // exchange a[i] and a[r].
         int tmp = a[i];
+
         a[i] = a[r];
         a[r] = tmp;
         System.out.println(i);
