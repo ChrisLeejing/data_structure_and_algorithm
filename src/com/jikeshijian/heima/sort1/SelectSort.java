@@ -2,24 +2,25 @@ package com.jikeshijian.heima.sort1;
 
 /**
  * This is description.
- * 冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。
- * 需求：
- * 排序前：{4,5,6,3,2,1}
- * 排序后：{1,2,3,4,5,6}
- * 时间复杂度：O(n^2)
+ * SelectSort:
+ * Before: {4,6,8,7,9,2,10,1}
+ * After: {1,2,4,5,7,8,9,10}
+ * Time Complexity: O(n^2)
  *
  * @author Chris Lee
- * @date 2020/7/5 19:55
+ * @date 2020/7/16 21:19
  */
-public class Bubble {
+public class SelectSort {
 
     public static void sort(Comparable[] comparables) {
-        for (int i = comparables.length - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (greater(comparables[j], comparables[j + 1])) {
-                    exchange(comparables, j, j + 1);
+        for (int i = 0; i < comparables.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < comparables.length; j++) {
+                if (greater(comparables[minIndex], comparables[j])) {
+                    minIndex = j;
                 }
             }
+            exchange(comparables, i, minIndex);
         }
     }
 

@@ -8,11 +8,11 @@ import java.util.Arrays;
  * @author Chris Lee
  * @date 2020/7/16 21:58
  */
-public class InsertTest {
+public class InsertSortTest {
     public static void main(String[] args) {
         Integer[] arr = {4, 3, 2, 10, 12, 1, 5, 6};
 
-        Insert.sort(arr);
+        InsertSort.sort(arr);
 
         System.out.println(Arrays.toString(arr));
     }

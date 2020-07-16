@@ -12,7 +12,7 @@ public class SelectTest {
     public static void main(String[] args) {
         Integer[] arr = {4, 6, 8, 7, 9, 2, 10, 1};
 
-        Select.sort(arr);
+        SelectSort.sort(arr);
 
         System.out.println(Arrays.toString(arr));
 
