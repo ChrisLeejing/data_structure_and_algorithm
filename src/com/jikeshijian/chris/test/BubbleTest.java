@@ -1,4 +1,6 @@
-package com.jikeshijian.heima.sort1;
+package com.jikeshijian.chris.test;
+
+import com.jikeshijian.chris.sort1.Bubble;
 
 import java.util.Arrays;
 
