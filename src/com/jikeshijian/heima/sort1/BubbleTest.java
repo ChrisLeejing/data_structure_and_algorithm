@@ -8,11 +8,11 @@ import java.util.Arrays;
  * @author Chris Lee
  * @date 2020/7/5 20:53
  */
-public class BubbleSortTest {
+public class BubbleTest {
     public static void main(String[] args) {
         Integer[] arr = {4, 5, 6, 3, 2, 1};
 
-        BubbleSort.sort(arr);
+        Bubble.sort(arr);
 
         System.out.println(Arrays.toString(arr));
     }

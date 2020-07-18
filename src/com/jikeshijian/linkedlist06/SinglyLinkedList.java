@@ -31,7 +31,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * Insert the node to the head.
+     * Insertion the node to the head.
      *
      * @param value the value of node.
      */

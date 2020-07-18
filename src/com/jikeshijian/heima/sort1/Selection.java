@@ -2,24 +2,23 @@ package com.jikeshijian.heima.sort1;
 
 /**
  * This is description.
- * InsertSort:
- * Before: {4, 3, 2, 10, 12, 1, 5, 6}
- * After: {1, 2, 3, 4, 5, 6, 10, 12}
+ * Selection:
  * Time Complexity: O(n^2)
  *
  * @author Chris Lee
- * @date 2020/7/16 21:42
+ * @date 2020/7/16 21:19
  */
-public class InsertSort {
+public class Selection {
+
     public static void sort(Comparable[] comparables) {
-        for (int i = 1; i < comparables.length; i++) {
-            for (int j = i; j > 0; j--) {
-                if (greater(comparables[j - 1], comparables[j])) {
-                    exchange(comparables, j - 1, j);
-                } else {
-                    break;
+        for (int i = 0; i < comparables.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < comparables.length; j++) {
+                if (greater(comparables[minIndex], comparables[j])) {
+                    minIndex = j;
                 }
             }
+            exchange(comparables, i, minIndex);
         }
     }
 

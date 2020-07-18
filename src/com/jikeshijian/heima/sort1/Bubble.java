@@ -2,15 +2,13 @@ package com.jikeshijian.heima.sort1;
 
 /**
  * This is description.
- * BubbleSort:
- * Before：{4,5,6,3,2,1}
- * After：{1,2,3,4,5,6}
+ * Bubble:
  * Time Complexity：O(n^2)
  *
  * @author Chris Lee
  * @date 2020/7/5 19:55
  */
-public class BubbleSort {
+public class Bubble {
 
     public static void sort(Comparable[] comparables) {
         for (int i = comparables.length - 1; i > 0; i--) {

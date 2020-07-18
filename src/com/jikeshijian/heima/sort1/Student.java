@@ -2,9 +2,6 @@ package com.jikeshijian.heima.sort1;
 
 /**
  * This is description.
- * 需求：
- * 1.定义一个学生类Student，具有年龄age和姓名username两个属性，并通过Comparable接口提供比较规则；
- * 2.定义测试类Test，在测试类Test中定义测试方法Comparable getMax(Comparable c1,Comparable c2)完成测试
  *
  * @author Chris Lee
  * @date 2020/7/5 19:05

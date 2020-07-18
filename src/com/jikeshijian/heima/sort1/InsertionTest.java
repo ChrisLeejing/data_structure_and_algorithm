@@ -6,15 +6,14 @@ import java.util.Arrays;
  * This is description.
  *
  * @author Chris Lee
- * @date 2020/7/16 21:37
+ * @date 2020/7/16 21:58
  */
-public class SelectTest {
+public class InsertionTest {
     public static void main(String[] args) {
-        Integer[] arr = {4, 6, 8, 7, 9, 2, 10, 1};
+        Integer[] arr = {4, 3, 2, 10, 12, 1, 5, 6};
 
-        SelectSort.sort(arr);
+        Insertion.sort(arr);
 
         System.out.println(Arrays.toString(arr));
-
     }
 }
