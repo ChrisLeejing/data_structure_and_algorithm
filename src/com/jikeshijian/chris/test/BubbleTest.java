@@ -12,10 +12,11 @@ import java.util.Arrays;
  */
 public class BubbleTest {
     public static void main(String[] args) {
-        Integer[] arr = {4, 5, 6, 3, 2, 1};
+        Integer[] arr = {6, 5, 3, 1, 8, 7, 2, 4};
 
         Bubble.sort(arr);
 
+        // [1, 2, 3, 4, 5, 6, 7, 8]
         System.out.println(Arrays.toString(arr));
     }
 }

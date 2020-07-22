@@ -12,10 +12,11 @@ import java.util.Arrays;
  */
 public class SelectionTest {
     public static void main(String[] args) {
-        Integer[] arr = {4, 6, 8, 7, 9, 2, 10, 1};
+        Integer[] arr = {8, 5, 2, 6, 9, 3, 1, 4, 0, 7};
 
         Selection.sort(arr);
 
+        // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         System.out.println(Arrays.toString(arr));
 
     }
