@@ -22,11 +22,11 @@ public class Selection {
         }
     }
 
-    public static boolean greater(Comparable c1, Comparable c2) {
+    private static boolean greater(Comparable c1, Comparable c2) {
         return c1.compareTo(c2) > 0;
     }
 
-    public static void exchange(Comparable[] a, int i, int j) {
+    private static void exchange(Comparable[] a, int i, int j) {
         Comparable tmp = a[i];
         a[i] = a[j];
         a[j] = tmp;
