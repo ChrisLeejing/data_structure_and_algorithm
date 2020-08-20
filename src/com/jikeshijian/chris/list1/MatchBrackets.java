@@ -21,9 +21,9 @@ public class MatchBrackets {
         Stack<String> stack = new Stack<>();
         for (int i = 0; i < string.length(); i++) {
             String value = String.valueOf(string.charAt(i));
-            if (value.equals("(")) {
+            if ("(".equals(value)) {
                 stack.push(value);
-            } else if (value.equals(")")) {
+            } else if (")".equals(value)) {
                 String pop = stack.pop();
                 if (pop == null) {
                     return false;
