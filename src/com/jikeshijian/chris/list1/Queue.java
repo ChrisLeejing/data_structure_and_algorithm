@@ -26,7 +26,7 @@ public class Queue<T> implements Iterable<T> {
     private Node last;
     private int N;
 
-    Queue() {
+    public Queue() {
         this.head = new Node(null, null);
         this.last = null;
         N = 0;
@@ -59,9 +59,9 @@ public class Queue<T> implements Iterable<T> {
         Node old = head.next;
         head.next = old.next;
         N--;
-
-        if (last == null) {
-            return null;
+        // Fix bug: dequeue means delete element, while the element is deleted over, reset last = null.
+        if (isEmpty()) {
+            last = null;
         }
         return (T) old.item;
     }

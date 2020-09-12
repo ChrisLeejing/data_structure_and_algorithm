@@ -1,5 +1,7 @@
 package com.jikeshijian.chris;
 
+import com.jikeshijian.chris.list1.Queue;
+
 /**
  * This is description.
  *
@@ -129,4 +131,144 @@ public class BinaryTree<Key extends Comparable<Key>, Value> {
         return N;
     }
 
+    public Key min() {
+        return min(root).key;
+    }
+
+    private Node min(Node x) {
+        if (x == null) {
+            return null;
+        }
+
+        if (x.left != null) {
+            return min(x.left);
+        } else {
+            return x;
+        }
+    }
+
+    public Key max() {
+        return max(root).key;
+    }
+
+    private Node max(Node x) {
+        if (x == null) {
+            return null;
+        }
+
+        if (x.right != null) {
+            return max(x.right);
+        } else {
+            return x;
+        }
+    }
+
+    public Queue<Key> preErgodic() {
+        Queue<Key> keys = new Queue<>();
+        preErgodic(root, keys);
+        return keys;
+    }
+
+    private void preErgodic(Node x, Queue<Key> keys) {
+        if (x == null) {
+            return;
+        }
+        keys.enqueue(x.key);
+
+        if (x.left != null) {
+            preErgodic(x.left, keys);
+        }
+
+        if (x.right != null) {
+            preErgodic(x.right, keys);
+        }
+    }
+
+    public Queue<Key> midErgodic() {
+        Queue<Key> keys = new Queue<>();
+        midErgodic(root, keys);
+        return keys;
+    }
+
+    private void midErgodic(Node x, Queue<Key> keys) {
+        if (x == null) {
+            return;
+        }
+        if (x.left != null) {
+            midErgodic(x.left, keys);
+        }
+
+        keys.enqueue(x.key);
+
+        if (x.right != null) {
+            midErgodic(x.right, keys);
+        }
+    }
+
+    public Queue<Key> postErgodic() {
+        Queue<Key> keys = new Queue<>();
+        postErgodic(root, keys);
+        return keys;
+    }
+
+    private void postErgodic(Node x, Queue<Key> keys) {
+        if (x == null) {
+            return;
+        }
+        if (x.left != null) {
+            postErgodic(x.left, keys);
+        }
+
+        if (x.right != null) {
+            postErgodic(x.right, keys);
+        }
+
+        keys.enqueue(x.key);
+    }
+
+    public Queue<Key> layerErgodic() {
+        Queue<Key> keys = new Queue<>();
+        Queue<Node> nodes = new Queue<>();
+
+        nodes.enqueue(root);
+
+        while (!nodes.isEmpty()) {
+            Node node = nodes.dequeue();
+            keys.enqueue(node.key);
+
+            if (node.left != null) {
+                nodes.enqueue(node.left);
+            }
+
+            if (node.right != null) {
+                nodes.enqueue(node.right);
+            }
+        }
+        return keys;
+    }
+
+    public int maxDepth() {
+        return maxDepth(root);
+    }
+
+    public int maxDepth(Node x) {
+        if (x == null) {
+            return 0;
+        }
+
+        int max = 0;
+        int maxLeft = 0;
+        int maxRight = 0;
+
+        if (x.left != null) {
+            maxLeft = maxDepth(x.left);
+        }
+        if (x.right != null) {
+            maxRight = maxDepth(x.right);
+        }
+
+        max = maxLeft > maxRight ? maxLeft + 1 : maxRight + 1;
+
+        return max;
+    }
 }
