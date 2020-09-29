@@ -1,4 +1,4 @@
-package com.jikeshijian.chris;
+package com.jikeshijian.chris.tree;
 
 import com.jikeshijian.chris.list1.Queue;
 

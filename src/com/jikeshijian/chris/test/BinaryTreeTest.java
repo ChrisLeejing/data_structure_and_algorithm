@@ -1,6 +1,6 @@
 package com.jikeshijian.chris.test;
 
-import com.jikeshijian.chris.BinaryTree;
+import com.jikeshijian.chris.tree.BinaryTree;
 import com.jikeshijian.chris.list1.Queue;
 
 /**
