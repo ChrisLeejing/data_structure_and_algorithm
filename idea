@@ -1,0 +1,135 @@
+说明：详情请参考慕课网课程：IntelliJ IDEA神器使用技巧：
+http://www.imooc.com/learn/924(感谢课程作者：闪电侠)
+
+推荐：
+
+1. 课程老师(闪电侠)IDEA快捷键总结文档：
+https://github.com/lightningMan/config/blob/master/intellij/shortcut-readme.md
+
+2. 另一位学习课程的同学(夜空中最亮的庆)的总结, 也写的用心：
+https://www.jianshu.com/p/131c2deb3ecf
+
+3. 另外一个学习IntelliJ IDEA的教程: www.youmeek.com
+4. 下面是我自己总结：
+
+快捷键
+[Done]:
+一. 文件操作:
+Alt + Insert: 创建文件, 文件夹...
+F5：复制文件到当前目录.
+F6：复制文件到指定目录.
+
+Ctrl + C: 复制文件名.
+Ctrl + Shift + C：复制文件绝对路径.
+
+Ctrl + V：粘贴
+Ctrl + Shift + V：批量粘贴(调出剪切板).
+Ctrl + Alt + T: Surround With(if, if/else, try/catch, for/while, synchronized, runnable).
+
+二. 智能返回:
+Ctrl + Alt + V：智能返回响应类型结果.
+
+三. 行操作:
+1. Shift + Enter: 向下插入一行
+2. Ctrl + Alt + Enter: 向上插入一行
+
+四. 列操作
+1. Alt + 鼠标左键：列编辑(进行多行列编辑).
+2. Ctrl + Alt + Shift + J: 选中所有被选中的符号(例如：选中所有的分号).
+3. Ctrl + 向右箭头：移动光标到下一个单词.
+4. Ctrl + Shift + 向右箭头：移动光标到下一个单词并选中.
+5. Shift + Home: 移动光标到行首并选中.
+6. Shift + End: 移动光标到行尾并选中.
+7. F2/Shift + F2: 快速向下(上)定位到错误行.
+8. Alt + Insert: 生成构造方法, get/set方法, 覆写方法, toString()...
+9. Alt + Enter: 智能提示.
+
+五. Postfix：后缀, Postfix(for, sout, field(name.field)...)
+1. 100.for/100.fori: 增强for循环/普通for循环.
+2. new Date().sout: 输出当前时间.
+3. "String".r + 向上箭头: return "String";
+4. name.nn: 对name字段进行非空判断.
+5. name.null: 对name字段进行为空判断.
+
+六. 重构与抽取：
+重构：
+Shift + F6: 重构变量.
+Ctrl + F6: 重构方法(或Alt + Enter).
+抽取：
+Ctrl + Alt + V：抽取变量.
+Ctrl + Alt + C：抽取静态常量.
+Ctrl + Alt + F：抽取成员变量(字段).
+Ctrl + Alt + P：抽取方法参数.
+Ctrl + Alt + M：抽取方法.
+
+七. View Code
+Git集成与版本控制：
+annotate：鼠标右键, 查看当前行代码是由何人, 何时编辑及修改.
+local history: 本地修改历史.
+show history: 查看历史.
+
+八. 断点调试：
+Ctrl + F8：添加/取消断点.
+Shift + F10：运行.
+Shift + F9：调试.
+F8：单步运行.
+F9：调到下一个断点.
+Ctrl + Shift + F8：查看所有断点.
+Mute Breakpoints：禁止所有断点.
+
+九. 结构图：
+Ctrl + F12：查看field, method.
+Ctrl + H：查看类的继承结构体系.
+Ctrl + Alt + U：查看类的继承结构体系图(新建窗口)
+Ctrl + Alt + Shift + U：查看类的继承结构体系图(同一窗口)
+Ctrl + H：查看方法调用谁, 被谁调用.
+Alt + F7: Find Usages, 查看被谁调用.
+
+[To Do]:
+Ctrl + Alt + Shift + 向上箭头/向下箭头: 上次修改的地方previous change.
+Ctrl + Alt + Z：撤销, 可以针对于行, 文件, 文件夹.
+show label: 查看标记历史.
+Ctrl + Shift + F8：条件(Condition)断点.
+Alt + F8：动态求值.
+Alt + F9：运行到指定行(Run to Cursor).
+F2：动态改变值set value : list -> null.
+Ctrl + Shift + F9：上下文运行, 用在单元测试中方便.
+Alt + Shift + F9：运行最近的文件.
+Ctrl + F11: 利用书签跳转.
+Alt + Shift + F: 收藏到最爱.
+command+J: (参考老师用的快捷键文档)字符跳转插件imacsIdea.
+利用vim进行多窗口编辑(ideaVim plugin).
+Ctrl + N: 2次搜索jar包中的类.
+-----------------------------------------------------------------------------
+Ctrl + F11: 利用书签跳转.
+Alt + Shift + F: 收藏到最爱.
+command+J: (参考老师用的快捷键文档)字符跳转插件imacsIdea
+利用vim进行多窗口编辑(ideaVim plugin)
+Ctrl + N: 2次搜索jar包中的类.
+Ctrl + Shift + Alt + N: 搜索符号(字段, 方法名).
+move caret to line end: 快捷键未设置.
+move caret to line end with selection:
+move caret to line start:
+move caret to line start with selection:
+live template: field, nn, postfix, ->参考live template.
+Alt + enter: 实现接口.
+shift + F6: 重构所有模糊变量/方法.
+
+多个实现类:
+@Service("userService1")
+UserServiceImpl implements UserService;
+@Service("userService2")
+UserService2Impl implements UserService;
+
+@Autowired
+@Qualifier("userService1")
+private UserService userService1;
+能否自动连接数据库?
+数据库中重构shift + F6
+debug: 条件断点, 表达式求值, 调到光标指定行, set value : list -> null
+编辑当前运行环境(调整参数), Ctrl + shift + F9: 运行最近的.
+Ctrl + shift + 数字: 书签(数字).
+Ctrl + Alt + Shift + U: 查看maven类图.
+
+
+
